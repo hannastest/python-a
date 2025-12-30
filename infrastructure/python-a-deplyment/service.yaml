@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: python-a
+  labels:
+    app: python-a
+    service: python-a
+spec:
+  selector:
+    app: python-a
+    service: python-a
+  ports:
+    - protocol: TCP
+      port: 5000
+      targetPort: 5000
+  type: ClusterIP
